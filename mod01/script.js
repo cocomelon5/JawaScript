@@ -1,11 +1,11 @@
 'use strict';
 // -----1-----
 const good = 'Генератор защитного поля';
-var goodsPrice = 1000;
-var text = `Выбран ${good}, цена за штуку ${goodsPrice} кредитов`;
+let goodsPrice = 1000;
+let text = `Выбран ${good}, цена за штуку ${goodsPrice} кредитов`;
 console.log(text);
-var goodsPrice = 2000;
-var text = `Выбран ${good}, цена за штуку ${goodsPrice} кредитов`;
+goodsPrice = 2000;
+text = `Выбран ${good}, цена за штуку ${goodsPrice} кредитов`;
 console.log(text);
 
 //-----2-----
@@ -60,7 +60,9 @@ const INDIA = 'индия';
 const JAMAICA = 'ямайка';
 
 let country = prompt('Укажите вашу страну');
-country = country.toLowerCase();
+if (country !== null) {
+  country = country.toLowerCase();
+}
 
 let price;
 
@@ -91,7 +93,7 @@ switch (country) {
 }
 
 //-----6-----
-let input = prompt('Веедите число');
+let input = prompt('Введите число');
 let total = 0;
 do {
   (total = total + Number(input)), (input = prompt('Веедите число'));
